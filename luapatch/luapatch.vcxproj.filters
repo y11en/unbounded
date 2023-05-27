@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="minhook">
+      <UniqueIdentifier>{dbee44ba-321b-487c-961a-034b977013f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="luajit">
+      <UniqueIdentifier>{acbd357d-396f-4454-88db-be0027a6e68f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="script">
+      <UniqueIdentifier>{10abf5cc-be43-4d34-9860-f539a7c6fa32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="phnt">
+      <UniqueIdentifier>{19180f50-1aee-4f70-a317-b1c252201e38}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="state.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="helper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Interceptor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="minhook\hook.c">
+      <Filter>minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="minhook\trampoline.c">
+      <Filter>minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="minhook\buffer.c">
+      <Filter>minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="minhook\hde\hde32.c">
+      <Filter>minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="minhook\hde\hde64.c">
+      <Filter>minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="native_function.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lua-seri.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stackwalker.cpp" />
+    <ClCompile Include="luapool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="myrpc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="myrpc_c.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="minhook\buffer.h">
+      <Filter>minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\trampoline.h">
+      <Filter>minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\hde\hde32.h">
+      <Filter>minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\hde\hde64.h">
+      <Filter>minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\hde\pstdint.h">
+      <Filter>minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\hde\table32.h">
+      <Filter>minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\hde\table64.h">
+      <Filter>minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lauxlib.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_alloc.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_arch.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_asm.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_asm_arm.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_asm_arm64.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_asm_mips.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_asm_ppc.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_asm_x86.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_bc.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_bcdump.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_buf.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_carith.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_ccall.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_ccallback.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_cconv.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_cdata.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_char.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_clib.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_cparse.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_crecord.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_ctype.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_debug.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_def.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_dispatch.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_emit_arm.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_emit_arm64.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_emit_mips.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_emit_ppc.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_emit_x86.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_err.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_errmsg.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_ff.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_ffrecord.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_frame.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_func.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_gc.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_gdbjit.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_ir.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_ircall.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_iropt.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_jit.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_lex.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_lib.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_mcode.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_meta.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_obj.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_parse.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_prng.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_profile.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_record.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_serialize.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_snap.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_state.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_str.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_strfmt.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_strscan.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_tab.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_target.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_target_arm.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_target_arm64.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_target_mips.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_target_ppc.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_target_x86.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_trace.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_traceerr.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_udata.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_vm.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lj_vmevent.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lua.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\luaconf.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\luajit.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LuaJIT\src\lualib.h">
+      <Filter>luajit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntbcd.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntdbg.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntexapi.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntgdi.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntioapi.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntkeapi.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntldr.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntlpcapi.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntmisc.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntmmapi.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntnls.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntobapi.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntpebteb.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntpfapi.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntpnpapi.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntpoapi.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntpsapi.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntregapi.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntrtl.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntsam.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntseapi.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntsmss.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\nttmapi.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\nttp.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntwow64.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntxcapi.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\ntzwapi.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\phnt.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\phnt_ntdef.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\phnt_windows.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="stackwalker.h" />
+    <ClInclude Include="..\phnt\subprocesstag.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\phnt\winsta.h">
+      <Filter>phnt</Filter>
+    </ClInclude>
+    <ClInclude Include="myrpcitf.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source.def">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="script\hook.lua">
+      <Filter>script</Filter>
+    </None>
+    <None Include="script\main.lua">
+      <Filter>script</Filter>
+    </None>
+    <None Include="..\phnt\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="myrpc.idl">
+      <Filter>源文件</Filter>
+    </Midl>
+  </ItemGroup>
+</Project>

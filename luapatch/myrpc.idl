@@ -1,0 +1,15 @@
+[
+	uuid(551d88b0-b831-4283-a1cd-276559e49f28),
+	version(1.0)
+]
+interface RPCServer
+{
+	// 官方文档推荐的自定义字符串写法(带长度和大小)
+		typedef struct _MYSTRING {
+			unsigned short size;
+			unsigned short length;
+			[ptr, size_is(size), length_is(length)] char string[*];
+		} MYSTRING, * PMYSTRING;
+
+	void rpc_Upload([in]PMYSTRING msg);
+}

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{8a4c9679-ef4b-48ff-ab54-0f0bc1dec9d2}</ProjectGuid>
+    <RootNamespace>luapatch</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>ubagent</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <EnableManagedIncrementalBuild>false</EnableManagedIncrementalBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);LUA_COMPAT_APIINTCASTS</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>..\luajit\src;minhook;..\phnt</AdditionalIncludeDirectories>
+      <LanguageStandard>Default</LanguageStandard>
+      <CompileAsManaged>false</CompileAsManaged>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>buildvm.lib;lua51.lib;luajit.lib;minilua.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);LUA_COMPAT_APIINTCASTS</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>luajit;minhook;..\phnt</AdditionalIncludeDirectories>
+      <LanguageStandard>Default</LanguageStandard>
+      <CompileAsManaged>false</CompileAsManaged>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>buildvm.lib;lua51.lib;luajit.lib;minilua.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>Source.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);LUA_COMPAT_APIINTCASTS</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>luajit;minhook;..\phnt</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <CompileAsManaged>false</CompileAsManaged>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>buildvm_64.lib;lua51_64.lib;luajit_64.lib;minilua_64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);LUA_COMPAT_APIINTCASTS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>luajit;minhook;..\phnt</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <CompileAsManaged>false</CompileAsManaged>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>buildvm_64.lib;lua51_64.lib;luajit_64.lib;minilua_64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>Source.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="helper.cpp" />
+    <ClCompile Include="Interceptor.cpp" />
+    <ClCompile Include="lua-seri.c" />
+    <ClCompile Include="luapool.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="minhook\buffer.c" />
+    <ClCompile Include="minhook\hde\hde32.c" />
+    <ClCompile Include="minhook\hde\hde64.c" />
+    <ClCompile Include="minhook\hook.c" />
+    <ClCompile Include="minhook\trampoline.c" />
+    <ClCompile Include="myrpc.cpp" />
+    <ClCompile Include="myrpc_c.c" />
+    <ClCompile Include="native_function.cpp" />
+    <ClCompile Include="stackwalker.cpp" />
+    <ClCompile Include="state.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\LuaJIT\src\lauxlib.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_alloc.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_arch.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_asm.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_asm_arm.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_asm_arm64.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_asm_mips.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_asm_ppc.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_asm_x86.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_bc.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_bcdump.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_buf.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_carith.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_ccall.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_ccallback.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_cconv.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_cdata.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_char.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_clib.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_cparse.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_crecord.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_ctype.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_debug.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_def.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_dispatch.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_emit_arm.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_emit_arm64.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_emit_mips.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_emit_ppc.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_emit_x86.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_err.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_errmsg.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_ff.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_ffrecord.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_frame.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_func.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_gc.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_gdbjit.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_ir.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_ircall.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_iropt.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_jit.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_lex.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_lib.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_mcode.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_meta.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_obj.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_parse.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_prng.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_profile.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_record.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_serialize.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_snap.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_state.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_str.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_strfmt.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_strscan.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_tab.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_target.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_target_arm.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_target_arm64.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_target_mips.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_target_ppc.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_target_x86.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_trace.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_traceerr.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_udata.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_vm.h" />
+    <ClInclude Include="..\LuaJIT\src\lj_vmevent.h" />
+    <ClInclude Include="..\LuaJIT\src\lua.h" />
+    <ClInclude Include="..\LuaJIT\src\luaconf.h" />
+    <ClInclude Include="..\LuaJIT\src\luajit.h" />
+    <ClInclude Include="..\LuaJIT\src\lualib.h" />
+    <ClInclude Include="..\phnt\ntbcd.h" />
+    <ClInclude Include="..\phnt\ntdbg.h" />
+    <ClInclude Include="..\phnt\ntexapi.h" />
+    <ClInclude Include="..\phnt\ntgdi.h" />
+    <ClInclude Include="..\phnt\ntioapi.h" />
+    <ClInclude Include="..\phnt\ntkeapi.h" />
+    <ClInclude Include="..\phnt\ntldr.h" />
+    <ClInclude Include="..\phnt\ntlpcapi.h" />
+    <ClInclude Include="..\phnt\ntmisc.h" />
+    <ClInclude Include="..\phnt\ntmmapi.h" />
+    <ClInclude Include="..\phnt\ntnls.h" />
+    <ClInclude Include="..\phnt\ntobapi.h" />
+    <ClInclude Include="..\phnt\ntpebteb.h" />
+    <ClInclude Include="..\phnt\ntpfapi.h" />
+    <ClInclude Include="..\phnt\ntpnpapi.h" />
+    <ClInclude Include="..\phnt\ntpoapi.h" />
+    <ClInclude Include="..\phnt\ntpsapi.h" />
+    <ClInclude Include="..\phnt\ntregapi.h" />
+    <ClInclude Include="..\phnt\ntrtl.h" />
+    <ClInclude Include="..\phnt\ntsam.h" />
+    <ClInclude Include="..\phnt\ntseapi.h" />
+    <ClInclude Include="..\phnt\ntsmss.h" />
+    <ClInclude Include="..\phnt\nttmapi.h" />
+    <ClInclude Include="..\phnt\nttp.h" />
+    <ClInclude Include="..\phnt\ntwow64.h" />
+    <ClInclude Include="..\phnt\ntxcapi.h" />
+    <ClInclude Include="..\phnt\ntzwapi.h" />
+    <ClInclude Include="..\phnt\phnt.h" />
+    <ClInclude Include="..\phnt\phnt_ntdef.h" />
+    <ClInclude Include="..\phnt\phnt_windows.h" />
+    <ClInclude Include="..\phnt\subprocesstag.h" />
+    <ClInclude Include="..\phnt\winsta.h" />
+    <ClInclude Include="minhook\buffer.h" />
+    <ClInclude Include="minhook\hde\hde32.h" />
+    <ClInclude Include="minhook\hde\hde64.h" />
+    <ClInclude Include="minhook\hde\pstdint.h" />
+    <ClInclude Include="minhook\hde\table32.h" />
+    <ClInclude Include="minhook\hde\table64.h" />
+    <ClInclude Include="minhook\trampoline.h" />
+    <ClInclude Include="myrpcitf.h" />
+    <ClInclude Include="stackwalker.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\phnt\README.md" />
+    <None Include="script\hook.lua" />
+    <None Include="script\main.lua" />
+    <None Include="Source.def">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="myrpc.idl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
