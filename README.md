@@ -20,7 +20,7 @@
 - [x] 用脚本实现了Dcom 远程服务 远程WMI等的监控拦截功能
 - [x] 使用pool轮询方式保证Hook点处并发性能
 - [x] 框架大概有三部分构成：Agent端`luapatch`(要注入的监控进程的), Script(业务逻辑), 一个服务进程`unbounded`(与Agent所在进程通信用的，简单的windows RPC实现) 
-
+- [x] 里面包含了一系列针对 `https://github.com/y11en/lm_tools` 项目的检测(拦截)方案 ;)
 
 ## 调用任意 Native 函数
 
@@ -96,3 +96,6 @@ WinExec("calc.exe", 0)
 
 ```
 
+演示
+
+[演示拦截效果](./asserts/demo.GIF)
