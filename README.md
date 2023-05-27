@@ -21,6 +21,7 @@
 - [x] 使用pool轮询方式保证Hook点处并发性能
 - [x] 框架大概有三部分构成：Agent端`luapatch`(要注入的监控进程的), Script(业务逻辑), 一个服务进程`unbounded`(与Agent所在进程通信用的，简单的windows RPC实现) 
 - [x] 里面包含了一系列针对 `https://github.com/y11en/lm_tools` 项目的检测(拦截)方案 ;)
+- [x] hook点以`pre`操作为主，当然要实现post的话也不难，修改hook点的shellcode先调用原函数，然后将结果传回给脚本进行处理即可 -> pre_hook -> call func -> post_hook，你会问怎么接管call func的返回啊？替换栈上的返回地址啊！🤣 
 
 ## 调用任意 Native 函数
 
